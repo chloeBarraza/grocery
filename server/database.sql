@@ -1,4 +1,4 @@
-CREATE DATABASE groceryList;
+CREATE DATABASE grocerylist;
 
 CREATE TABLE grocries(
     grocery_id SERIAL PRIMARY KEY,

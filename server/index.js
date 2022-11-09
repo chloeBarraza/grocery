@@ -8,7 +8,11 @@ app.use(express.json());
 
 app.post('/groceries', async(req, res) => {
     try {
-        console.log(req.body);
+        const {description} = req.body;
+        const newGrocery = await pool.query('INSERT INTO grocries (description) VALUES($1)', 
+        [description]);
+
+        res.json(newGrocery);
     } catch (err) {
         console.error(err.message);
     }
