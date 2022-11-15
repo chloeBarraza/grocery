@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const AddGrocery = () => {
   const [description, setDescription] = useState("");
 
-  const onAdd = async (e) => {
+  const onSubmitForm = async (e) => {
     e.preventDefault();
     try {
       const body = { description };
@@ -12,7 +12,8 @@ const AddGrocery = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      window.location = "/";
+
+      console.log(response);
     } catch (err) {
       console.error(err.message);
     }
@@ -20,15 +21,15 @@ const AddGrocery = () => {
 
   return (
     <>
-      <h1 className="text-center mt-2">Groceries</h1>
-      <form className="d-flex mt-5" onSubmit={onAdd}>
+      <h1 className="text-center mt-3">Input Grocery</h1>
+      <form className="d-flex mt-4" onSubmit={onSubmitForm}>
         <input
           type="text"
           className="form-control"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <button className="btn btn-success">Add</button>
+        <button className="btn btn-primary">Add</button>
       </form>
     </>
   );

@@ -5,7 +5,7 @@ import ListGroceries from "./components/ListGroceries";
 function App() {
   return (
     <>
-      <div>
+      <div className="container">
         <AddGrocery />
         <ListGroceries />
       </div>
