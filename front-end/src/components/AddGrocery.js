@@ -13,7 +13,9 @@ const AddGrocery = () => {
         body: JSON.stringify(body),
       });
 
-      console.log(response);
+      //console.log(response);
+
+      window.location = "/"; //prevents window reloading after
     } catch (err) {
       console.error(err.message);
     }
@@ -21,7 +23,7 @@ const AddGrocery = () => {
 
   return (
     <>
-      <h1 className="text-center mt-3">Input Grocery</h1>
+      <h1 className="text-center mt-4">Input Grocery</h1>
       <form className="d-flex mt-4" onSubmit={onSubmitForm}>
         <input
           type="text"
