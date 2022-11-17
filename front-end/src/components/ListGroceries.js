@@ -14,6 +14,21 @@ const ListGroceries = () => {
     }
   };
 
+  const deleteGrocery = async (id) => {
+    try {
+      const deleteGrocery = await fetch(
+        `http://localhost:5000/groceries/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
+
+      setGrocery(groceries.filter((grocery) => grocery.grocery_id !== id));
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
   useEffect(() => {
     getGroceries();
   }, []);
@@ -31,10 +46,17 @@ const ListGroceries = () => {
           </thead>
           <tbody>
             {groceries.map((grocery) => (
-              <tr>
+              <tr key={grocery.grocery_id}>
                 <td>{grocery.description}</td>
-                <td>Edit</td>
-                <td>Delete</td>
+                <td><EditGrocery /></td>
+                <td>
+                  <button
+                    className="btn btn-outline-danger"
+                    onClick={() => deleteGrocery(grocery.grocery_id)}
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
