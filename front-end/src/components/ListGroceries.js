@@ -39,16 +39,18 @@ const ListGroceries = () => {
         <table className="table mt-5 text-center">
           <thead>
             <tr>
-              <th>Grocery</th>
+              <th>Grocery needed</th>
               <th>Edit</th>
-              <th>Delete</th>
+              <th>Got it!</th>
             </tr>
           </thead>
           <tbody>
             {groceries.map((grocery) => (
               <tr key={grocery.grocery_id}>
                 <td>{grocery.description}</td>
-                <td><EditGrocery /></td>
+                <td>
+                  <EditGrocery grocery={grocery} />
+                </td>
                 <td>
                   <button
                     className="btn btn-outline-danger"

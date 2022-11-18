@@ -23,14 +23,17 @@ const AddGrocery = () => {
 
   return (
     <>
-      <h1 className="text-center mt-4">Input Grocery</h1>
+      <h1 className="text-center mt-4">What do we need?</h1>
       <form className="d-flex mt-4" onSubmit={onSubmitForm}>
+        <span class=""></span>
         <input
           type="text"
-          className="form-control"
+          className="form-control border"
+          placeholder="Type here..."
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
+        
         <button className="btn btn-primary">Add</button>
       </form>
     </>
