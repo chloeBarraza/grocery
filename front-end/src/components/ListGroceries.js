@@ -35,7 +35,7 @@ const ListGroceries = () => {
 
   return (
     <>
-      <body>
+      <body className="tableBackground">
         <table className="table mt-5 text-center">
           <thead>
             <tr>

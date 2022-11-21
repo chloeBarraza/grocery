@@ -1,12 +1,6 @@
-/* body {
-  margin: 0;
+/* .background {
   background-color: rgb(155, 153, 153);
-  background-image: url(./image/food.jpg);
-  background-repeat: no-repeat;
-  background-size: 100vh 100vw;
+  background-size: cover;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 } */
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
