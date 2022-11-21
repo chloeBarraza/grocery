@@ -11,7 +11,7 @@ app.post("/groceries", async (req, res) => {
   try {
     const { description } = req.body;
     const newGrocery = await pool.query(
-      "INSERT INTO grocries (description) VALUES($1) RETURNING *",
+      "INSERT INTO groceries (description) VALUES($1) RETURNING *",
       [description]
     );
 
@@ -24,7 +24,7 @@ app.post("/groceries", async (req, res) => {
 //get all -WORKS
 app.get("/groceries", async (req, res) => {
   try {
-    const allGroceries = await pool.query("SELECT * FROM grocries");
+    const allGroceries = await pool.query("SELECT * FROM groceries");
     res.json(allGroceries.rows);
   } catch (err) {
     console.error(err.message);
@@ -36,7 +36,7 @@ app.get("/groceries/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const grocery = await pool.query(
-      "SELECT * FROM grocries WHERE grocery_id = $1",
+      "SELECT * FROM groceries WHERE grocery_id = $1",
       [id]
     );
 
@@ -52,7 +52,7 @@ app.put("/groceries/:id", async (req, res) => {
     const { id } = req.params;
     const { description } = req.body;
     const updateGrocery = await pool.query(
-      "UPDATE grocries SET description = $1 WHERE grocery_id = $2",
+      "UPDATE groceries SET description = $1 WHERE grocery_id = $2",
       [description, id]
     );
 
@@ -67,7 +67,7 @@ app.delete("/groceries/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const deleteGrocery = await pool.query(
-      "DELETE FROM grocries WHERE grocery_id = $1",
+      "DELETE FROM groceries WHERE grocery_id = $1",
       [id]
     );
 

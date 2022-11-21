@@ -1,6 +1,6 @@
 CREATE DATABASE grocerylist;
 
-CREATE TABLE grocries(
+CREATE TABLE groceries(
     grocery_id SERIAL PRIMARY KEY,
     description VARCHAR(500)
 );
