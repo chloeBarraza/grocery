@@ -1,8 +1,8 @@
-# A simple app used to demonstrate my inability to write a title to this read me //come back to later...
+# A simple app used to demonstrate my inability to write a title to this read me **//come back to later...**
 
 ## Routes used in the database
 * app.post for new item
-  - This post inserts into our table the new value/s added by user then returns the value/s. //come back to
+  - This post inserts into our table the new value/s added by user then returns the value/s. **//come back to**
 *  app.get 
 
 ## How to set up the server to our grocery list app
