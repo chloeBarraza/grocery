@@ -9,7 +9,8 @@
 * placeholder text
 
 ### How to use the app
-* 
-
+* Type into the input box and click the Add button.
+* To edit these list items click the Edit button and in the modal’s input box then edit as needed or hit Close if you did not intend to edit this item.
+* To delete an item click the Delete button.
 
 ![grocery](./images/GroceryScreenshot.png)
