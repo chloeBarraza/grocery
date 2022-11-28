@@ -14,7 +14,7 @@
 * Open up this code in your preferred -word I cant remember-.
 * Launch the first terminal.
  - cd into server.
- -
+ - 
  - Then enter "nodemon index".
  
 * Launch the second terminal.
