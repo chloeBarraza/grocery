@@ -1,4 +1,4 @@
-# A grocery list demonstrating both front and back-end skills.
+# A grocery list app demonstrating/practicing both front and back-end skills.
 
 ## Routes used in the database
 * app.post for new item
@@ -11,16 +11,15 @@
 * Your server is now ready for use!
 
 ## Getting started
-* Open up this code in your preferred -word I cant remember-.
+* Open up this code in your preferred IDE.
 * Launch the first terminal.
- - cd into server.
- - 
- - Then enter "nodemon index".
+  - cd into server.
+  - Enter to set up "npm i express pg cors".
+  - Then enter "nodemon index".
  
 * Launch the second terminal.
- - cd into front-end.
- - Enter to set up "npm i express pg cors".
- - Then enter "npm start".
+  - cd into front-end.
+  - Then enter "npm start".
  
 ## How to use the app
 * Type into the input box and click the Add button.
