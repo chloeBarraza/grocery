@@ -17,6 +17,9 @@
 ---------- | ------- | --------- | ----------- 
 Postgresql | Node.js | React     | Styled Components 
 
+## ERD
+![grocery](./images/ERD.png)
+
 
 ## How to set up the server
 * After opening the database.sql file in the sever folder and launching the psql shell login
