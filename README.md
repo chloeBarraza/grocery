@@ -11,7 +11,12 @@
     - This route selects the list item by ID then updates the description. 
 5) app.delete("/groceries"), to delete an item.
     - This route selects the list item by ID then deletes the item from the table.
- 
+    
+ ## Main Tech Stack
+ Database   | API     | Front-End | Styling   
+---------- | ------- | --------- | ----------- 
+Postgresql | Node.js | React     | Styled Components 
+
 
 ## How to set up the server
 * After opening the database.sql file in the sever folder and launching the psql shell login
