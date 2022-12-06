@@ -25,7 +25,7 @@ Postgresql | Node.js | React     | Styled Components
 * After opening the database.sql file in the sever folder and launching the psql shell login
     - User: 'postgres'
     - Host: 'localhost'
-    - Password: '1742'
+    - Password: your password
     - Port: 5432
     - Database: 'grocerylist'
     
