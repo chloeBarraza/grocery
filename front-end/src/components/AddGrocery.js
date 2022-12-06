@@ -1,7 +1,17 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 
 const AddGrocery = () => {
   const [description, setDescription] = useState("");
+
+  const Button = styled.button`
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border-radius: 3px;
+    color: black;
+    border: 2px solid;
+  `;
 
   const onSubmitForm = async (e) => {
     e.preventDefault();
@@ -12,8 +22,6 @@ const AddGrocery = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-
-      //console.log(response);
 
       window.location = "/"; //prevents window reloading after
     } catch (err) {

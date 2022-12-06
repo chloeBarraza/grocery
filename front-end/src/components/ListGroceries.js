@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from "react";
 import EditGrocery from "./EditGrocery";
+import styled from "styled-components";
 
 const ListGroceries = () => {
+  const Thead = styled.thead`
+    tr {
+      font-weight: 400;
+      color: violet;
+      font-size: 1rem;
+    }
+  `;
   const [groceries, setGrocery] = useState([]);
 
   const getGroceries = async () => {
